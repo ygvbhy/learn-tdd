@@ -39,3 +39,10 @@ test("when the minus button is pressed, the counter changes to -1", () => {
   const counterElement = screen.getByTestId("counter");
   expect(counterElement).toHaveTextContent(-1);
 });
+
+// on/off 의 버튼의 색상이 blue 인지 확인
+test("on/off as blue color", () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId("on/off-button");
+  expect(buttonElement).toHaveStyle({ background: "blue" });
+});
